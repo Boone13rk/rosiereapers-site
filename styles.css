@@ -622,9 +622,15 @@ a {
   }
 
   .hero-logo {
-    width: min(260px, 65vw);
-    margin: 0;
-  }
+  width: min(260px, 65vw);
+  margin: 0;
+  justify-self: start;
+  align-self: start;
+}
+
+   .hero-logo img {
+  margin: 0;
+}
 
   .hero-intro {
     margin-left: 0;
