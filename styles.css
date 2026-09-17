@@ -137,36 +137,49 @@ a {
 
 .hero {
   position: relative;
-
   min-height: 760px;
-
   display: flex;
   align-items: center;
-
   overflow: hidden;
 
   background:
-
-    radial-gradient(
-      circle at 75% 55%,
-      rgba(150, 0, 0, 0.20),
-      transparent 35%
-    ),
-
-    radial-gradient(
-      circle at 15% 45%,
-      rgba(120, 0, 0, 0.14),
-      transparent 30%
-    ),
-
     linear-gradient(
       120deg,
-      #030303 10%,
-      #111111 50%,
-      #050505 90%
+      #020202 8%,
+      #0b0b0b 45%,
+      #050505 100%
     );
 }
 
+.hero-atmosphere {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 22% 32%,
+      rgba(110, 0, 0, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 58% 38%,
+      rgba(170, 10, 10, 0.28),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 86% 62%,
+      rgba(160, 20, 20, 0.22),
+      transparent 24%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.35) 40%,
+      rgba(0, 0, 0, 0.45) 70%,
+      rgba(0, 0, 0, 0.72) 100%
+    );
+}
+    
 .hero::before {
   content: "";
 
@@ -174,11 +187,10 @@ a {
   inset: 0;
 
   background:
-
     radial-gradient(
       ellipse at center,
-      transparent 20%,
-      rgba(0, 0, 0, 0.8) 90%
+      transparent 30%,
+      rgba(0, 0, 0, 0.72) 92%
     );
 }
 
@@ -189,36 +201,22 @@ a {
   background:
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.12),
-      rgba(0, 0, 0, 0.55)
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.48)
     );
 }
 
 .hero-content {
   position: relative;
-
   z-index: 2;
 
-  width: min(
-    calc(100% - 40px),
-    var(--content-width)
-  );
-
+  width: min(calc(100% - 40px), var(--content-width));
   margin: 80px auto 0;
 
   display: grid;
-
-  grid-template-columns:
-    minmax(250px, 380px)
-    1fr;
-
+  grid-template-columns: minmax(240px, 360px) minmax(320px, 1fr) minmax(180px, 240px);
   align-items: center;
-
-  gap: clamp(
-    40px,
-    8vw,
-    110px
-  );
+  gap: clamp(24px, 4vw, 64px);
 }
 
 /* =========================================================
@@ -235,16 +233,10 @@ a {
   justify-self: start;
 }
 
-.hero-text {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-
 .hero-logo img {
   display: block;
   width: 100%;
-  max-width: 380px;
+  max-width: 340px;
   height: auto;
 
   filter:
@@ -252,7 +244,19 @@ a {
     drop-shadow(0 8px 24px rgba(0, 0, 0, 0.75));
 }
 
+.hero-main {
+  grid-column: 2;
+  grid-row: 1;
+}
 
+.hero-sidecopy {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+
+  max-width: 220px;
+  text-align: left;
+}
 
 /* hero typography */
 
@@ -350,7 +354,31 @@ a {
   border-color:
     var(--red-bright);
 }
+.sidecopy-tagline {
+  margin: 0;
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 2vw, 2.4rem);
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
 
+.sidecopy-divider {
+  width: 54px;
+  height: 2px;
+  margin: 24px 0 28px;
+  background: var(--red-bright);
+}
+
+.sidecopy-points {
+  margin: 0;
+  color: var(--silver);
+  font-size: 1rem;
+  line-height: 1.9;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
 
 /* =========================================================
    SECTIONS
@@ -620,18 +648,18 @@ a {
   }
 
   .hero {
-    min-height: auto;
-    padding: 160px 0 90px;
-  }
+  min-height: auto;
+  padding: 160px 0 90px;
+}
 
-  .hero-content {
-    margin-top: 0;
-    grid-template-columns: 1fr;
-    text-align: left;
-    justify-items: start;
-  }
+.hero-content {
+  margin-top: 0;
+  grid-template-columns: 1fr;
+  text-align: left;
+  justify-items: start;
+}
 
-  .hero-logo {
+.hero-logo {
   grid-column: 1;
   grid-row: 1;
   width: min(260px, 65vw);
@@ -639,18 +667,23 @@ a {
   justify-self: start;
 }
 
-.hero-text {
+.hero-main {
   grid-column: 1;
   grid-row: 2;
 }
-   .hero-logo img {
-  margin: 0;
+
+.hero-sidecopy {
+  grid-column: 1;
+  grid-row: 3;
+  justify-self: start;
+  max-width: 100%;
+  margin-top: 18px;
 }
 
-  .hero-intro {
-    margin-left: 0;
-    margin-right: 0;
-  }
+.hero-intro {
+  margin-left: 0;
+  margin-right: 0;
+}
 
   .card-grid {
     grid-template-columns: 1fr;
