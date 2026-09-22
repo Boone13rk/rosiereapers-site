@@ -630,6 +630,32 @@ a {
 
 
 /* =========================================================
+   VETERAN IDENTITY
+   ========================================================= */
+
+.veteran-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  margin-top: 22px;
+
+  color: var(--silver);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.veteran-flag {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+/* =========================================================
    RESPONSIVE
    ========================================================= */
 
