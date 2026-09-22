@@ -86,9 +86,11 @@ a {
   min-height: 76px;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+   
+  align-items: center; 
+   
+  justify-content: flex-end;
+   
   gap: 30px;
 }
 
@@ -259,29 +261,25 @@ a {
   justify-self: end;
   align-self: center;
 
-  max-width: 220px;
+  width: 190px;
 
   text-align: center;
-
-  padding: 20px 0;
 }
 
 /* hero typography */
 
-.hero-kicker {
-  margin: 0 0 14px;
+/* =========================================================
+   HERO WORDMARK
+   ========================================================= */
 
-  color: var(--red-bright);
-
-  font-size: 0.72rem;
-  font-weight: 700;
-
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
+.hero-wordmark {
+  margin-bottom: 22px;
 }
 
-.hero h1 {
-  margin: 0 0 22px;
+.wordmark-rosie {
+  display: block;
+
+  color: #d51c23;
 
   font-family:
     Georgia,
@@ -289,17 +287,71 @@ a {
     serif;
 
   font-size:
-    clamp(3.4rem, 5.2vw, 6rem);
+    clamp(4.8rem, 7vw, 8.2rem);
 
-  line-height: 0.98;
+  font-weight: 700;
 
-  letter-spacing: -0.035em;
+  line-height: 0.78;
+
+  letter-spacing: -0.06em;
+
+  text-shadow:
+    0 2px 0 #6b080c,
+    0 4px 0 #290204,
+    0 8px 18px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(180, 0, 0, 0.18);
+}
+
+.wordmark-reapers {
+  display: block;
+
+  margin-top: 12px;
+
+  color: #d0cbc4;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(2rem, 3.2vw, 3.8rem);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 0 #5f5a55,
+    0 4px 0 #252525,
+    0 7px 16px rgba(0, 0, 0, 0.95);
+}
+
+.hero-tagline {
+  margin: 0 0 22px;
 
   color: var(--white);
 
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(1rem, 1.5vw, 1.35rem);
+
+  letter-spacing: 0.20em;
+
+  line-height: 1.5;
+
+  text-transform: uppercase;
+
   text-shadow:
-    0 3px 8px rgba(0, 0, 0, 0.95),
-    0 8px 24px rgba(0, 0, 0, 0.8);
+    0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
 .hero-intro {
@@ -377,10 +429,10 @@ a {
 }
 
 .sidecopy-divider {
-  width: 46px;
+  width: 48px;
   height: 2px;
 
-  margin: 25px auto 25px;
+  margin: 0 auto 26px;
 
   background: var(--red-bright);
 
@@ -690,11 +742,27 @@ a {
    ========================================================= */
 
 @media (max-width: 1100px) {
+
   .header-inner {
     flex-direction: column;
     justify-content: center;
     padding: 16px 0;
   }
+
+  .wordmark-rosie {
+    font-size: clamp(4rem, 14vw, 6.5rem);
+  }
+
+  .wordmark-reapers {
+    font-size: clamp(1.8rem, 7vw, 3rem);
+  }
+
+  .hero-tagline {
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+  }
+
+}
 
   .main-nav {
     flex-wrap: wrap;
