@@ -715,8 +715,7 @@ a {
  .hero-wordmark-image img {
   width: min(100%, 640px);
   max-width: 100%;
-  transform: none;
-}
+  }
 
  .hero-tagline {
     font-size: 0.9rem;
@@ -732,6 +731,11 @@ a {
  .hero {
   min-height: auto;
   padding: 150px 0 80px;
+}
+
+.hero-brand-lockup {
+  width: 100%;
+  transform: none;
 }
 
 .hero-atmosphere {
