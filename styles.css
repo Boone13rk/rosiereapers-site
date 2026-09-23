@@ -280,7 +280,7 @@ a {
 
 .hero-brand-lockup {
   width: 108%;
-  transform: translateX(-4%);
+  transform: translate(-4%, -24px);
   text-align: center;
 }
 
@@ -663,14 +663,20 @@ a {
 }
 
 .copyright {
-  margin-top: 22px !important;
+  margin-top: 26px !important;
 
-  color: var(--silver);
+  color: #d7d2ca;
 
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 800;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.10em;
+  line-height: 1.5;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.9);
 }
 
 
