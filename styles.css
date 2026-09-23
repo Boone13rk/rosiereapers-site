@@ -252,6 +252,8 @@ a {
   align-self: center;
 
   max-width: 780px;
+
+  transform: translateY(-22px); 
 }
 
 .hero-sidecopy {
@@ -722,15 +724,7 @@ a {
   transform: none;
 }
 
-  .wordmark-rosie {
-    font-size: clamp(4rem, 14vw, 6.5rem);
-  }
-
-  .wordmark-reapers {
-    font-size: clamp(1.8rem, 7vw, 3rem);
-  }
-
-  .hero-tagline {
+ .hero-tagline {
     font-size: 0.9rem;
     letter-spacing: 0.15em;
   }
@@ -776,10 +770,7 @@ a {
 }
 
 .hero-main {
-  grid-column: 1;
-  grid-row: 2;
-
-  max-width: 620px;
+  transform: none;
 }
 
 .hero-sidecopy {
