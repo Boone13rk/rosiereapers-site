@@ -294,61 +294,67 @@ a {
 }
 
 .hero-tagline {
-  margin: 0 0 22px;
+  width: min(100%, 560px);
+  margin: 0 0 20px;
 
-  color: #e2ded7;
+  color: #f0ece5;
 
   font-family: "Cinzel", Georgia, serif;
-  font-size: clamp(0.92rem, 1.3vw, 1.2rem);
-  font-weight: 500;
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  font-weight: 600;
 
-  letter-spacing: 0.24em;
+  letter-spacing: 0.20em;
   line-height: 1.5;
 
+  text-align: center;
   text-transform: uppercase;
 
   text-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.95);
+    0 2px 5px rgba(0, 0, 0, 1),
+    0 0 12px rgba(0, 0, 0, 0.9);
 }
 
 .hero-intro {
   max-width: 520px;
 
-  margin: 0 0 30px;
+  margin: 0 0 26px;
 
-  color: var(--silver);
+  color: #c9c5be;
 
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 500;
 
-  line-height: 1.8;
-
-  letter-spacing: 0.12em;
+  line-height: 1.7;
+  letter-spacing: 0.10em;
 
   text-transform: uppercase;
 
   text-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.95);
+    0 2px 5px rgba(0, 0, 0, 1),
+    0 0 10px rgba(0, 0, 0, 0.9);
 }
+
 .hero-button {
   display: inline-block;
 
-  padding:
-    13px
-    25px;
+  padding: 13px 25px;
 
-  border:
-    1px solid
-    var(--red-bright);
+  border: 1px solid var(--red-bright);
+
+  background: rgba(0, 0, 0, 0.28);
 
   color: var(--white);
 
   text-decoration: none;
-
   text-transform: uppercase;
 
   letter-spacing: 0.15em;
 
-  font-size: 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9);
 
   transition:
     background 0.2s ease,
@@ -386,37 +392,35 @@ a {
 }
 
 .sidecopy-divider {
-  width: 48px;
+  width: 52px;
   height: 2px;
 
-  margin: 0 auto 26px;
+  margin: 0 auto 24px;
 
   background: var(--red-bright);
 
   box-shadow:
-    0 0 8px rgba(210, 31, 38, 0.35);
+    0 0 10px rgba(210, 31, 38, 0.55);
 }
 
 .sidecopy-points {
   margin: 0;
 
-  color: var(--silver);
+  color: #e0dcd5;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  font-family: "Cinzel", Georgia, serif;
 
-  font-size: 0.76rem;
+  font-size: 0.88rem;
+  font-weight: 600;
 
   line-height: 2;
-
-  letter-spacing: 0.13em;
+  letter-spacing: 0.12em;
 
   text-transform: uppercase;
 
   text-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.95);
+    0 2px 5px rgba(0, 0, 0, 1),
+    0 0 12px rgba(0, 0, 0, 1);
 }
 
 /* =========================================================
