@@ -278,33 +278,25 @@ a {
    HERO WORDMARK IMAGE
    ========================================================= */
 
+.hero-brand-lockup {
+  width: 108%;
+  transform: translateX(-4%);
+  text-align: center;
+}
+
 .hero-wordmark-image {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .hero-wordmark-image img {
   display: block;
-
-  width: 108%;
+  width: 100%;
   max-width: 820px;
   height: auto;
-
-  transform: translateX(-4%);
-}
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-  text-shadow:
-    0 2px 0 #47433f,
-    0 5px 12px rgba(0, 0, 0, 0.95);
 }
 
 .hero-tagline {
-  width: min(100%, 600px);
-
-  margin: 0 0 18px;
+  margin: 0 auto 18px;
 
   color: #f0ece5;
 
