@@ -240,6 +240,8 @@ a {
   max-width: 100%;
   height: auto;
 
+  border-radius: 50%;  
+
   filter:
     drop-shadow(0 0 22px rgba(190, 15, 20, 0.28))
     drop-shadow(0 12px 30px rgba(0, 0, 0, 0.85));
