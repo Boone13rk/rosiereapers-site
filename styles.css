@@ -204,21 +204,20 @@ a {
   position: relative;
   z-index: 2;
 
-  width: min(calc(100% - 64px), 1600px);
+  width: min(calc(100% - 70px), 1650px);
   margin: 88px auto 0;
 
   display: grid;
 
   grid-template-columns:
-    minmax(300px, 390px)
-    minmax(430px, 1fr)
-    minmax(190px, 230px);
+    minmax(280px, 370px)
+    minmax(520px, 1fr)
+    minmax(180px, 220px);
 
   align-items: center;
 
-  gap: clamp(52px, 5.5vw, 100px);
+  gap: clamp(70px, 7vw, 130px);
 }
-
 /* =========================================================
    HERO LOGO
    ========================================================= */
@@ -237,7 +236,7 @@ a {
 .hero-logo img {
   display: block;
 
-  width: clamp(275px, 23vw, 385px);
+  width: clamp(270px, 22vw, 360px);
   max-width: 100%;
   height: auto;
 
@@ -245,13 +244,14 @@ a {
     drop-shadow(0 0 22px rgba(190, 15, 20, 0.28))
     drop-shadow(0 12px 30px rgba(0, 0, 0, 0.85));
 }
+
 .hero-main {
   grid-column: 2;
   grid-row: 1;
 
   align-self: center;
 
-  max-width: 690px;
+  max-width: 780px;
 }
 
 .hero-sidecopy {
@@ -265,74 +265,24 @@ a {
 
   text-align: center;
 
-  transform: translateX(12px);
+  transform: translateX(10px);
 }
 
 /* hero typography */
 
 /* =========================================================
-   HERO WORDMARK
+   HERO WORDMARK IMAGE
    ========================================================= */
 
-.hero-wordmark {
-  margin-bottom: 22px;
+.hero-wordmark-image {
+  margin-bottom: 24px;
 }
 
-.wordmark-rosie {
+.hero-wordmark-image img {
   display: block;
-
-  font-family: "Cinzel Decorative", Georgia, serif;
-  font-size: clamp(5rem, 7.2vw, 8.6rem);
-  font-weight: 900;
-
-  line-height: 0.82;
-  letter-spacing: -0.055em;
-
-  background:
-    linear-gradient(
-      to bottom,
-      #ff3a3f 0%,
-      #d51c23 35%,
-      #a90d13 72%,
-      #650307 100%
-    );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-  -webkit-text-stroke:
-    1px rgba(255, 80, 80, 0.22);
-
-  text-shadow:
-    0 2px 0 #72070b,
-    0 4px 0 #310204,
-    0 8px 18px rgba(0, 0, 0, 0.95),
-    0 0 24px rgba(190, 10, 16, 0.24);
+  width: min(100%, 760px);
+  height: auto;
 }
-
-.wordmark-reapers {
-  display: block;
-
-  margin-top: 10px;
-
-  font-family: "Cinzel", Georgia, serif;
-  font-size: clamp(2rem, 3vw, 3.7rem);
-  font-weight: 600;
-
-  line-height: 1;
-  letter-spacing: -0.035em;
-
-  white-space: nowrap;
-
-  background:
-    linear-gradient(
-      to bottom,
-      #f1eee8 0%,
-      #c8c2b9 45%,
-      #8f8982 75%,
-      #57534f 100%
-    );
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -755,6 +705,10 @@ a {
     justify-content: center;
     padding: 16px 0;
   }
+
+   .hero-wordmark-image img {
+  width: min(100%, 640px);
+}
 
   .wordmark-rosie {
     font-size: clamp(4rem, 14vw, 6.5rem);
