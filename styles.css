@@ -1003,6 +1003,51 @@ a {
 }
 
 /* =========================================================
+   LYRICS
+   ========================================================= */
+
+.lyrics-panel {
+  color: #d8d3cc;
+
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.lyric-stanza {
+  margin-bottom: 30px;
+}
+
+.lyric-stanza:last-child {
+  margin-bottom: 0;
+}
+
+.lyric-stanza p {
+  margin: 0 0 22px;
+}
+
+.lyric-section-label {
+  margin: 38px 0 24px;
+
+  color: var(--red-bright);
+
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.lyric-emphasis {
+  color: var(--red-bright);
+
+  font-weight: 700;
+
+  text-shadow:
+    0 0 10px rgba(210, 31, 38, 0.18);
+}
+
+/* =========================================================
    RESPONSIVE
    ========================================================= */
 
