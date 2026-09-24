@@ -921,6 +921,17 @@ a {
   text-transform: uppercase;
 }
 
+.song-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border: 1px solid var(--border-red);
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.65);
+}
+
 .listen-panel {
   padding: 32px;
 
