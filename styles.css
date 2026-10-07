@@ -870,6 +870,23 @@ a {
   line-height: 1.05;
 }
 
+/* =========================================================
+   SONG SECTION LABELS
+   ========================================================= */
+
+.song-section .section-label {
+  color: var(--red-bright);
+
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(0.9rem, 1.25vw, 1.05rem);
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
 .song-body-copy {
   color: #c0bbb4;
 
