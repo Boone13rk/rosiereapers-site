@@ -1196,4 +1196,56 @@ a {
     grid-template-columns: 1fr;
   }
 
+  /* =========================================================
+   SONG PAGE RESPONSIVE
+   ========================================================= */
+
+.song-hero {
+  min-height: auto;
+  padding: 140px 0 70px;
+}
+
+.song-hero-content {
+  width: min(calc(100% - 40px), 760px);
+  margin-top: 0;
+
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+.song-brand-logo {
+  width: min(240px, 60vw);
+}
+
+.song-heading h1 {
+  font-size: clamp(2.8rem, 12vw, 4.6rem);
+}
+
+.song-media-grid {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.song-cover {
+  max-width: 420px;
+}
+
+.song-section {
+  padding: 70px 20px;
+}
+
+.song-text-column {
+  max-width: 100%;
+}
+
+.listen-panel {
+  padding: 26px;
+}
+
+.lyrics-panel,
+.reference-panel,
+.sources-panel {
+  padding: 24px;
+} 
+
 }
