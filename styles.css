@@ -754,6 +754,28 @@ a {
     );
 }
 
+.song-hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: 1;
+
+  background:
+    radial-gradient(
+      circle at 78% 42%,
+      rgba(255, 255, 255, 0.20) 0%,
+      rgba(255, 255, 255, 0.12) 10%,
+      rgba(255, 255, 255, 0.05) 22%,
+      rgba(255, 255, 255, 0) 34%
+    );
+
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
 .song-hero-content {
   position: relative;
   z-index: 2;
