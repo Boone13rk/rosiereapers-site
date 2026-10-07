@@ -1003,6 +1003,57 @@ a {
 }
 
 /* =========================================================
+   REFERENCE & SOURCE PANELS
+   ========================================================= */
+
+.reference-panel h3,
+.sources-panel h3 {
+  margin: 38px 0 14px;
+
+  color: var(--red-bright);
+
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+.reference-panel h3:first-child,
+.sources-panel h3:first-child {
+  margin-top: 0;
+}
+
+.reference-panel p,
+.sources-panel p {
+  margin: 0 0 22px;
+}
+
+.sources-panel strong {
+  color: #e2ddd5;
+  font-weight: 700;
+}
+
+.sources-panel a {
+  color: var(--silver);
+
+  font-weight: 700;
+  text-decoration: none;
+
+  border-bottom: 1px solid var(--red-dark);
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sources-panel a:hover {
+  color: var(--red-bright);
+  border-color: var(--red-bright);
+}
+
+/* =========================================================
    LYRICS
    ========================================================= */
 
