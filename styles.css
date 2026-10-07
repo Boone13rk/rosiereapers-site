@@ -865,9 +865,9 @@ a {
     "Times New Roman",
     serif;
 
-  font-size: clamp(1.9rem, 4vw, 3.8rem);
+  font-size: clamp(1.8rem, 2.7vw, 2.7rem);
 
-  line-height: 1.05;
+  line-height: 1.08;
 }
 
 /* =========================================================
@@ -878,15 +878,14 @@ a {
   color: var(--red-bright);
 
   font-family: "Cinzel", Georgia, serif;
-  font-size: clamp(1rem, 1.45vw, 1.15rem);
+  font-size: clamp(1.1rem, 1.7vw, 1.3rem);
   font-weight: 700;
 
-  letter-spacing: 0.20em;
-  line-height: 1.4;
+  letter-spacing: 0.16em;
+  line-height: 1.35;
 
   text-transform: uppercase;
 }
-
 .song-body-copy {
   color: #c0bbb4;
 
