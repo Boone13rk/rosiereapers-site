@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reaper Six | Rosie & The Reapers</title>
+
+  <meta
+    name="description"
+    content="Reaper Six commentary and the fictional satirical character Salami Sal — part of the Rosie & The Reapers universe."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .reaper-six-page .song-hero-content {
+      grid-template-columns: minmax(300px, 420px) 1fr;
+    }
+
+    .salami-sal-portrait img {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+
+      border: 1px solid var(--border-red);
+      box-shadow:
+        0 0 28px rgba(190, 22, 29, 0.18),
+        0 18px 38px rgba(0, 0, 0, 0.72);
+    }
+
+    .reaper-six-page .song-caption {
+      max-width: 720px;
+    }
+
+    .reaper-six-card-grid {
+      margin-top: 34px;
+
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .reaper-six-card {
+      padding: 28px;
+
+      border: 1px solid var(--border-red);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(18, 18, 18, 0.96),
+          rgba(6, 6, 6, 0.96)
+        );
+    }
+
+    .reaper-six-card .card-category {
+      margin: 0 0 12px;
+    }
+
+    .reaper-six-card h3 {
+      margin: 0 0 18px;
+
+      color: var(--white);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.45rem;
+      line-height: 1.25;
+    }
+
+    .reaper-six-card p {
+      color: #bbb6af;
+      line-height: 1.8;
+    }
+
+    .reaper-six-card a {
+      display: inline-block;
+      margin-top: 12px;
+
+      color: var(--silver);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      border-bottom: 1px solid var(--red-dark);
+    }
+
+    .reaper-six-card a:hover {
+      color: var(--red-bright);
+      border-color: var(--red-bright);
+    }
+
+    .reaper-six-status {
+      display: inline-block;
+      margin-top: 12px;
+
+      color: var(--steel);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .character-details {
+      margin-top: 30px;
+      padding: 30px;
+
+      border-left: 3px solid var(--red-dark);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(18, 18, 18, 0.92),
+          rgba(7, 7, 7, 0.92)
+        );
+    }
+
+    .character-details p {
+      margin: 0 0 20px;
+      color: #c5c0b8;
+      line-height: 1.9;
+    }
+
+    .character-details p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 1100px) {
+      .reaper-six-page .song-hero-content {
+        grid-template-columns: 1fr;
+      }
+
+      .salami-sal-portrait img {
+        max-width: 380px;
+      }
+
+      .reaper-six-card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="reaper-six-page">
+
+<header class="site-header">
+  <div class="header-inner">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#music">Music</a>
+      <a href="#salami-sal">Salami Sal</a>
+      <a href="#dispatches">Dispatches</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- =========================================
+       REAPER SIX HERO
+       ========================================= -->
+
+  <section class="song-hero">
+    <div class="song-hero-atmosphere"></div>
+    <div class="song-hero-overlay"></div>
+
+    <div class="song-hero-content">
+
+      <div class="salami-sal-portrait">
+        <img
+          src="assets/salami-sal-portrait.png"
+          alt="Salami Sal, a fictional faceless noir character from Reaper Six"
+        >
+      </div>
+
+      <div class="song-heading">
+        <p class="song-category">
+          Reaper Six Presents
+        </p>
+
+        <h1>
+          Salami<br>
+          Sal
+        </h1>
+
+        <p class="song-caption">
+          A fictional noir operator.<br>
+          One slice at a time.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       SALAMI SAL
+       ========================================= -->
+
+  <section class="song-section" id="salami-sal">
+    <div class="song-section-inner song-text-column">
+
+      <p class="section-label">
+        FEATURED CHARACTER
+      </p>
+
+      <h2>
+        Who Is Salami Sal?
+      </h2>
+
+      <div class="character-details">
+        <p>
+          Salami Sal is a fictional satirical character from the Reaper Six
+          universe: an affable, menacing noir operator who sees every political
+          maneuver as another slice in a much larger strategy.
+        </p>
+
+        <p>
+          His visual identity is deliberately anonymous — a completely shadowed
+          face, blacked-out hands, a dark pinstripe suit, solid red fedora band,
+          Palestinian-color tie and red rose boutonniere. He is a character,
+          not a depiction of a real person.
+        </p>
+
+        <p>
+          The name draws on the project's "salami tactics" theme: incremental
+          political gains portrayed through the visual language of an old-school
+          protection-racket gangster. The satire lets Sal explain his worldview
+          in his own voice while Reaper Six supplies the larger frame.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       DISPATCHES
+       ========================================= -->
+
+  <section class="song-section song-section-dark" id="dispatches">
+    <div class="song-section-inner">
+
+      <p class="section-label">
+        REAPER SIX DISPATCHES
+      </p>
+
+      <h2>
+        Salami Sal in the Field
+      </h2>
+
+      <div class="reaper-six-card-grid">
+
+        <article class="reaper-six-card">
+          <p class="card-category">
+            SECOND AMENDMENT
+          </p>
+
+          <h3>One Slice at a Time</h3>
+
+          <p>
+            Salami Sal applies his incremental, slice-by-slice worldview to a
+            Reaper Six political cartoon.
+          </p>
+
+          <a
+            href="https://rumble.com/v7ijdn0-one-slice-at-a-time-salami-sal-on-the-second-amendment.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch on Rumble →
+          </a>
+        </article>
+
+
+        <article class="reaper-six-card">
+          <p class="card-category">
+            CHARACTER FILE
+          </p>
+
+          <h3>Who Is Salami Sal?</h3>
+
+          <p>
+            The introductory comic traces the creative idea behind Sal and the
+            "one slice at a time" metaphor that defines the character.
+          </p>
+
+          <span class="reaper-six-status">
+            Archive entry coming soon
+          </span>
+        </article>
+
+
+        <article class="reaper-six-card">
+          <p class="card-category">
+            RULE 13
+          </p>
+
+          <h3>Pick the Target</h3>
+
+          <p>
+            A Reaper Six / Salami Sal treatment built around political pressure,
+            personalization and the mechanics of public confrontation.
+          </p>
+
+          <span class="reaper-six-status">
+            Archive entry coming soon
+          </span>
+        </article>
+
+
+        <article class="reaper-six-card">
+          <p class="card-category">
+            REAPER SIX
+          </p>
+
+          <h3>More Dispatches</h3>
+
+          <p>
+            Future Salami Sal cartoons, short videos and commentary pieces will
+            collect here as the Reaper Six archive grows.
+          </p>
+
+          <span class="reaper-six-status">
+            More coming soon
+          </span>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       ABOUT REAPER SIX
+       ========================================= -->
+
+  <section class="song-section">
+    <div class="song-section-inner song-text-column">
+
+      <p class="section-label">
+        REAPER SIX
+      </p>
+
+      <h2>
+        The Host Behind the Frame
+      </h2>
+
+      <div class="song-body-copy">
+        <p>
+          Reaper Six is the faceless commentary identity inside the broader
+          Rosie &amp; The Reapers project. It provides a home for political
+          cartoons, short-form commentary and recurring fictional characters.
+        </p>
+
+        <p>
+          Salami Sal is one of those characters. He is not Reaper Six himself;
+          he is a recurring voice inside the same creative universe.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-tagline">
+    Political Cartoons. Set to Music.
+  </p>
+
+  <div class="veteran-badge">
+    <span class="veteran-flag" aria-hidden="true">🇺🇸</span>
+    <span>Veteran-Created AI Band</span>
+  </div>
+
+  <p class="copyright">
+    © 2026 Liberty-Buster Digital Arts
+  </p>
+</footer>
+
+</body>
+</html>
