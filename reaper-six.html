@@ -145,6 +145,145 @@
         grid-template-columns: 1fr;
       }
     }
+  /* =========================================
+   SALAMI SAL DISPATCH CAROUSEL
+   ========================================= */
+
+.dispatch-carousel-shell {
+  margin-top: 34px;
+}
+
+.dispatch-carousel-topbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.carousel-button {
+  width: 46px;
+  height: 46px;
+
+  border: 1px solid var(--border-red);
+  background: rgba(10, 10, 10, 0.92);
+  color: var(--silver);
+
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+  color: var(--red-bright);
+  border-color: var(--red-bright);
+  background: rgba(25, 8, 8, 0.96);
+}
+
+.salami-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(
+    280px,
+    calc((100% - 48px) / 3)
+  );
+
+  gap: 24px;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: inline mandatory;
+
+  padding: 4px 2px 22px;
+}
+
+.salami-carousel .reaper-six-card {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-width: 0;
+}
+
+.salami-carousel:focus-visible {
+  outline: 1px solid var(--red-bright);
+  outline-offset: 6px;
+}
+
+.dispatch-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 22px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(150, 150, 150, 0.25);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(36, 36, 36, 0.94),
+      rgba(7, 7, 7, 0.98)
+    );
+}
+
+.dispatch-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dispatch-thumb-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  color: var(--steel);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.dispatch-date {
+  margin-top: 18px;
+
+  color: var(--steel);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .salami-carousel {
+    grid-auto-columns: 76%;
+  }
+}
+
+@media (max-width: 600px) {
+  .salami-carousel {
+    grid-auto-columns: 88%;
+    gap: 18px;
+  }
+
+  .dispatch-carousel-topbar {
+    margin-bottom: 14px;
+  }
+
+  .carousel-button {
+    width: 42px;
+    height: 42px;
+  }
+}
   </style>
 </head>
 
@@ -250,34 +389,81 @@
     </div>
   </section>
 
+<!-- =========================================
+     SALAMI SAL DISPATCHES
+     ========================================= -->
 
-  <!-- =========================================
-       DISPATCHES
-       ========================================= -->
+<section class="song-section song-section-dark" id="dispatches">
 
-  <section class="song-section song-section-dark" id="dispatches">
-    <div class="song-section-inner">
+  <div class="song-section-inner">
 
-      <p class="section-label">
-        REAPER SIX DISPATCHES
-      </p>
+    <p class="section-label">
+      REAPER SIX ARCHIVE
+    </p>
 
-      <h2>
-        Salami Sal in the Field
-      </h2>
+    <h2>
+      Salami Sal Dispatches
+    </h2>
 
-      <div class="reaper-six-card-grid">
+    <p class="song-body-copy">
+      Political cartoons, memes and short-form commentary from the
+      Reaper Six universe. Swipe through the archive or use the
+      navigation arrows to browse Salami Sal's latest appearances.
+    </p>
+
+
+    <div class="dispatch-carousel-shell">
+
+      <div class="dispatch-carousel-topbar">
+
+        <button
+          class="carousel-button carousel-prev"
+          type="button"
+          aria-label="Previous Salami Sal dispatch"
+        >
+          ←
+        </button>
+
+        <button
+          class="carousel-button carousel-next"
+          type="button"
+          aria-label="Next Salami Sal dispatch"
+        >
+          →
+        </button>
+
+      </div>
+
+
+      <div
+        class="salami-carousel"
+        id="salami-carousel"
+        tabindex="0"
+        aria-label="Salami Sal Dispatches"
+      >
+
 
         <article class="reaper-six-card">
+
+          <div class="dispatch-thumb dispatch-thumb-placeholder">
+            Second Amendment
+          </div>
+
           <p class="card-category">
             SECOND AMENDMENT
           </p>
 
-          <h3>One Slice at a Time</h3>
+          <h3>
+            One Slice at a Time
+          </h3>
 
           <p>
-            Salami Sal applies his incremental, slice-by-slice worldview to a
-            Reaper Six political cartoon.
+            Salami Sal applies his incremental, slice-by-slice
+            worldview to a Reaper Six political cartoon.
+          </p>
+
+          <p class="dispatch-date">
+            November 2026
           </p>
 
           <a
@@ -285,68 +471,106 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Watch on Rumble →
+            View Dispatch →
           </a>
+
         </article>
 
 
         <article class="reaper-six-card">
+
+          <div class="dispatch-thumb dispatch-thumb-placeholder">
+            Character File
+          </div>
+
           <p class="card-category">
             CHARACTER FILE
           </p>
 
-          <h3>Who Is Salami Sal?</h3>
+          <h3>
+            Who Is Salami Sal?
+          </h3>
 
           <p>
-            The introductory comic traces the creative idea behind Sal and the
-            "one slice at a time" metaphor that defines the character.
+            The introductory comic explores the historical inspiration
+            and the "one slice at a time" metaphor behind the character.
+          </p>
+
+          <p class="dispatch-date">
+            November 2026
           </p>
 
           <span class="reaper-six-status">
             Archive entry coming soon
           </span>
+
         </article>
 
 
         <article class="reaper-six-card">
+
+          <div class="dispatch-thumb dispatch-thumb-placeholder">
+            Rule 13
+          </div>
+
           <p class="card-category">
             RULE 13
           </p>
 
-          <h3>Pick the Target</h3>
+          <h3>
+            Pick the Target
+          </h3>
 
           <p>
-            A Reaper Six / Salami Sal treatment built around political pressure,
-            personalization and the mechanics of public confrontation.
+            A Reaper Six / Salami Sal treatment examining political
+            pressure, personalization and public confrontation.
+          </p>
+
+          <p class="dispatch-date">
+            November 2026
           </p>
 
           <span class="reaper-six-status">
             Archive entry coming soon
           </span>
+
         </article>
 
 
         <article class="reaper-six-card">
+
+          <div class="dispatch-thumb dispatch-thumb-placeholder">
+            Reaper Six Archive
+          </div>
+
           <p class="card-category">
             REAPER SIX
           </p>
 
-          <h3>More Dispatches</h3>
+          <h3>
+            More Dispatches
+          </h3>
 
           <p>
-            Future Salami Sal cartoons, short videos and commentary pieces will
-            collect here as the Reaper Six archive grows.
+            New Salami Sal cartoons, short videos and commentary
+            will be added as the Reaper Six archive grows.
           </p>
 
           <span class="reaper-six-status">
             More coming soon
           </span>
+
         </article>
+
 
       </div>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
+ 
 
 
   <!-- =========================================
@@ -397,5 +621,41 @@
   </p>
 </footer>
 
+<script>
+  const salamiCarousel =
+    document.getElementById("salami-carousel");
+
+  const previousDispatch =
+    document.querySelector(".carousel-prev");
+
+  const nextDispatch =
+    document.querySelector(".carousel-next");
+
+  function getDispatchScrollAmount() {
+    const card =
+      salamiCarousel.querySelector(".reaper-six-card");
+
+    if (!card) {
+      return salamiCarousel.clientWidth * 0.8;
+    }
+
+    return card.getBoundingClientRect().width + 24;
+  }
+
+  previousDispatch.addEventListener("click", function () {
+    salamiCarousel.scrollBy({
+      left: -getDispatchScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+  nextDispatch.addEventListener("click", function () {
+    salamiCarousel.scrollBy({
+      left: getDispatchScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+</script>
+  
 </body>
 </html>
