@@ -40,6 +40,47 @@
     .reaper-six-page .song-caption {
       max-width: 720px;
     }
+     
+    /* REAPER SIX HERO BRANDING */
+
+    .reaper-six-hero-logo {
+      margin-bottom: 20px;
+    }
+
+    .reaper-six-hero-logo img {
+      display: block;
+      width: 180px;
+      max-width: 100%;
+      height: auto;
+
+      filter:
+        drop-shadow(0 0 18px rgba(190, 22, 29, 0.22))
+        drop-shadow(0 8px 18px rgba(0, 0, 0, 0.85));
+    }
+
+    .reaper-six-page .song-category {
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      letter-spacing: 0.22em;
+      margin-bottom: 18px;
+    }
+
+    .reaper-six-page .song-heading h1 {
+      font-size: clamp(2.8rem, 5vw, 4.75rem);
+      margin-bottom: 22px;
+    }
+
+    @media (max-width: 700px) {
+
+      .reaper-six-hero-logo img {
+        width: 130px;
+      }
+
+      .reaper-six-hero-logo {
+        margin-bottom: 18px;
+      }
+
+    }
+
 
     .reaper-six-card-grid {
       margin-top: 34px;
@@ -321,9 +362,17 @@
       </div>
 
       <div class="song-heading">
-        <p class="song-category">
-          Reaper Six Presents
-        </p>
+
+  <div class="reaper-six-hero-logo">
+    <img
+      src="assets/reaper-six-logo.png"
+      alt="Official Reaper Six logo"
+    >
+  </div>
+
+  <p class="song-category">
+    Reaper Six Presents
+  </p>
 
         <h1>
           Salami<br>
