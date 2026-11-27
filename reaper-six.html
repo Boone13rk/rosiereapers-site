@@ -21,9 +21,36 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
+    
     .reaper-six-page .song-hero-content {
-      grid-template-columns: minmax(300px, 420px) 1fr;
+      grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
+
+      grid-template-areas:
+        "portrait branding"
+        "portrait heading";
+
+      grid-template-rows: auto auto;
+
+      row-gap: 0;
     }
+
+    .reaper-six-branding {
+      grid-area: branding;
+      text-align: center;
+      align-self: end;
+    }
+
+    .salami-sal-portrait {
+      grid-area: portrait;
+      align-self: center;
+    }
+
+    .reaper-six-page .song-heading {
+      grid-area: heading;
+      align-self: start;
+      justify-self: center;
+    }
+
 
     .salami-sal-portrait img {
       display: block;
@@ -181,19 +208,49 @@
       margin-bottom: 0;
     }
 
+   
     @media (max-width: 1100px) {
+
       .reaper-six-page .song-hero-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+
+        grid-template-areas:
+          "branding"
+          "portrait"
+          "heading";
+
+        grid-template-rows: auto auto auto;
+
+        gap: 24px;
+
+        justify-items: center;
+      }
+
+      .reaper-six-branding {
+        width: 100%;
+      }
+
+      .salami-sal-portrait {
+        width: 100%;
+        max-width: 380px;
       }
 
       .salami-sal-portrait img {
         max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .reaper-six-page .song-heading {
+        width: 100%;
+        text-align: center;
       }
 
       .reaper-six-card-grid {
         grid-template-columns: 1fr;
       }
+
     }
+
   /* =========================================
    SALAMI SAL DISPATCH CAROUSEL
    ========================================= */
@@ -360,7 +417,23 @@
     <div class="song-hero-atmosphere"></div>
     <div class="song-hero-overlay"></div>
 
+   
     <div class="song-hero-content">
+
+      <div class="reaper-six-branding">
+
+        <div class="reaper-six-hero-logo">
+          <img
+            src="assets/reaper-six-logo.png"
+            alt="Official Reaper Six logo"
+          >
+        </div>
+
+        <p class="song-category">
+          Reaper Six Presents
+        </p>
+
+      </div>
 
       <div class="salami-sal-portrait">
         <img
@@ -371,17 +444,6 @@
 
       <div class="song-heading">
 
-  <div class="reaper-six-hero-logo">
-    <img
-      src="assets/reaper-six-logo.png"
-      alt="Official Reaper Six logo"
-    >
-  </div>
-
-  <p class="song-category">
-    Reaper Six Presents
-  </p>
-
         <h1>
           Salami<br>
           Sal
@@ -391,9 +453,11 @@
           A fictional noir operator.<br>
           One slice at a time.
         </p>
+
       </div>
 
     </div>
+ 
   </section>
 
 
