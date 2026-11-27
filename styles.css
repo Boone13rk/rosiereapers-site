@@ -112,9 +112,11 @@ a {
   display: flex;
   gap: 26px;
 
-  font-size: 0.8rem;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
 
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
 
   text-transform: uppercase;
 }
