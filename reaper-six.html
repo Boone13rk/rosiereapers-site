@@ -61,16 +61,17 @@
 
     }
 
-    .salami-sal-portrait img {
+        .salami-sal-portrait img {
       display: block;
       width: 100%;
       max-width: 420px;
       height: auto;
 
-      border: 1px solid var(--border-red);
-      box-shadow:
-        0 0 28px rgba(190, 22, 29, 0.18),
-        0 18px 38px rgba(0, 0, 0, 0.72);
+      border: none;
+      background: transparent;
+      box-shadow: none;
+
+      filter: drop-shadow(0 0 18px rgba(190, 22, 29, 0.15));
     }
 
     .reaper-six-page .song-caption {
@@ -446,7 +447,7 @@
 
       <div class="salami-sal-portrait">
         <img
-          src="assets/salami-sal-portrait.png"
+          src="assets/salami-sal-transparent.png"
           alt="Salami Sal, a fictional faceless noir character from Reaper Six"
         >
       </div>
@@ -605,10 +606,15 @@
 
 </article>
 
-        <article class="reaper-six-card">
+            <article class="reaper-six-card">
 
-          <div class="dispatch-thumb dispatch-thumb-placeholder">
-            Character File
+          <div class="dispatch-thumb"
+               style="border: none; background: transparent;">
+            <img
+              src="assets/salami-sal-transparent.png"
+              alt="Who Is Salami Sal? — Character File"
+              style="object-fit: contain;"
+            >
           </div>
 
           <p class="card-category">
@@ -620,19 +626,19 @@
           </h3>
 
           <p>
-            The introductory comic explores the historical inspiration
-            and the "one slice at a time" metaphor behind the character.
+            Discover the personality, historical inspiration
+            and philosophy behind the fictional noir operator.
           </p>
 
           <p class="dispatch-date">
             November 2026
           </p>
 
-          <span class="reaper-six-status">
-            Archive entry coming soon
-          </span>
+          <a href="dispatches/who-is-salami-sal.html">
+            View Dispatch →
+          </a>
 
-        </article>
+        </article>    
 
 
       <article class="reaper-six-card">
