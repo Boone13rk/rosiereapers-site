@@ -184,8 +184,13 @@
       }
     }
     /* Character-file layout */
-    .character-portrait {
+       .character-portrait {
       width: min(420px, 100%);
+      border: none;
+      background: transparent;
+      box-shadow: none;
+
+      filter: drop-shadow(0 0 18px rgba(190, 22, 29, 0.15));
     }
     .character-profile {
       display: grid;
@@ -230,7 +235,7 @@
   <section class="dispatch-content" id="dispatch">
     <div class="character-profile">
       <div class="dispatch-media character-portrait">
-        <img src="../assets/salami-sal-portrait.png" alt="Salami Sal, a shadow-faced noir character in a pinstripe suit, red tie and fedora">
+        <img src="../assets/salami-sal-transparent.png" alt="Salami Sal, a shadow-faced noir character in a pinstripe suit, red tie and fedora"> 
       </div>
       <div class="dispatch-panel">
         <h2>Character Dossier</h2>
