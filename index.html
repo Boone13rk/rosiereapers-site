@@ -19,6 +19,164 @@
 >
 
   <link rel="stylesheet" href="styles.css">
+   <style>
+
+    /* =========================================
+       MUSIC ARCHIVE CAROUSEL
+       ========================================= */
+
+    .music-carousel-shell {
+      margin-top: 34px;
+    }
+
+    .music-carousel-topbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .music-carousel-button {
+      width: 46px;
+      height: 46px;
+
+      border: 1px solid var(--border-red);
+      background: rgba(10, 10, 10, 0.92);
+      color: var(--silver);
+
+      font-size: 1.4rem;
+      cursor: pointer;
+
+      transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .music-carousel-button:hover,
+    .music-carousel-button:focus-visible {
+      color: var(--red-bright);
+      border-color: var(--red-bright);
+      background: rgba(25, 8, 8, 0.96);
+    }
+
+    .music-carousel {
+      display: grid;
+      grid-auto-flow: column;
+
+      grid-auto-columns: minmax(
+        280px,
+        calc((100% - 48px) / 3)
+      );
+
+      gap: 24px;
+
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+
+      scroll-behavior: smooth;
+      scroll-snap-type: inline mandatory;
+
+      padding: 4px 2px 22px;
+    }
+
+    .music-carousel .content-card {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      min-width: 0;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .music-carousel .content-card .card-category {
+      color: var(--red-bright);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .music-carousel .content-card a,
+    .music-carousel .music-status {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    .music-carousel:focus-visible {
+      outline: 1px solid var(--red-bright);
+      outline-offset: 6px;
+    }
+
+    .music-thumb {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      margin-bottom: 22px;
+
+      overflow: hidden;
+      border: 1px solid rgba(150, 150, 150, 0.25);
+      background: #090909;
+    }
+
+    .music-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .music-thumb-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-sizing: border-box;
+      padding: 20px;
+
+      background: linear-gradient(
+        145deg,
+        #242424,
+        #070707
+      );
+
+      color: var(--silver);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .music-status {
+      display: inline-block;
+      padding-top: 12px;
+
+      color: var(--steel);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .music-carousel {
+        grid-auto-columns: 76%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .music-carousel {
+        grid-auto-columns: 88%;
+      }
+
+      .music-carousel-topbar {
+        margin-bottom: 14px;
+      }
+
+      .music-carousel-button {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+  </style> 
 </head>
 
 <body>
@@ -121,59 +279,122 @@
           cartoon with a soundtrack.
         </p>
 
-        <div class="card-grid">
+              <!-- MUSIC ARCHIVE CAROUSEL -->
 
-          <article class="content-card">
-            <p class="card-category">
-              REAPING THE CULTURE THROUGH SONG
-            </p>
+        <div class="music-carousel-shell">
 
-            <h3>Followers of Moloch</h3>
+          <div class="music-carousel-topbar">
 
-            <p>
-              Lyrics, background, historical context and source material.
-            </p>
+            <button
+              class="music-carousel-button music-prev"
+              type="button"
+              aria-label="Previous song"
+            >
+              ←
+            </button>
 
-            <a href="#">
-              Song Archive →
-            </a>
-          </article>
+            <button
+              class="music-carousel-button music-next"
+              type="button"
+              aria-label="Next song"
+            >
+              →
+            </button>
+
+          </div>
+
+          <div
+            class="music-carousel"
+            id="music-carousel"
+            tabindex="0"
+            aria-label="Rosie &amp; The Reapers Song Archive"
+          >
+
+            <!-- FOLLOWERS OF MOLOCH -->
+
+            <article class="content-card">
+
+              <div class="music-thumb">
+                <img
+                  src="assets/followers-of-moloch-cover-art.png"
+                  alt="Followers of Moloch cover artwork"
+                >
+              </div>
+
+              <p class="card-category">
+                REAPING CULTURE THROUGH SONG
+              </p>
+
+              <h3>Followers of Moloch</h3>
+
+              <p>
+                Say their names. Remember the children.
+              </p>
+
+              <a href="songs/followers-of-moloch.html">
+                Song Archive →
+              </a>
+
+            </article>
 
 
-          <article class="content-card">
-            <p class="card-category">
-              REAPING SOCIALISM THROUGH SONG
-            </p>
+            <!-- BULLET OR BALLOT BOX -->
 
-            <h3>Bullet or Ballot Box</h3>
+            <article class="content-card">
 
-            <p>
-              Reform or revolution — the destination remains the same.
-            </p>
+              <div class="music-thumb">
+                <img
+                  src="assets/bullet-or-ballot-box-cover-art.png"
+                  alt="Bullet or Ballot Box cover artwork"
+                >
+              </div>
 
-            <a href="songs/bullet-or-ballot-box.html">
-              Song Archive →
-            </a>
-          </article>
+              <p class="card-category">
+                REAPING SOCIALISM THROUGH SONG
+              </p>
+
+              <h3>Bullet or Ballot Box</h3>
+
+              <p>
+                Reform or revolution — the destination
+                remains the same.
+              </p>
+
+              <a href="songs/bullet-or-ballot-box.html">
+                Song Archive →
+              </a>
+
+            </article>
 
 
-          <article class="content-card">
-            <p class="card-category">
-              REAPING SOCIALISM THROUGH SONG
-            </p>
+            <!-- THE BIG TENT -->
 
-            <h3>The Big Tent</h3>
+            <article class="content-card">
 
-            <p>
-              Coalitions, factions, power and the politics inside the tent.
-            </p>
+              <div class="music-thumb music-thumb-placeholder">
+                The Big Tent
+              </div>
 
-            <a href="#">
-              Coming Soon →
-            </a>
-          </article>
+              <p class="card-category">
+                REAPING SOCIALISM THROUGH SONG
+              </p>
 
-        </div>
+              <h3>The Big Tent</h3>
+
+              <p>
+                Coalitions, factions, power and the
+                politics inside the tent.
+              </p>
+
+              <span class="music-status">
+                Coming Soon
+              </span>
+
+            </article>
+
+          </div>
+
+        </div> 
 
       </div>
 
@@ -345,6 +566,40 @@
     </p>
 
   </footer>
+<script>
+  const musicCarousel =
+    document.getElementById("music-carousel");
 
+  const previousSong =
+    document.querySelector(".music-prev");
+
+  const nextSong =
+    document.querySelector(".music-next");
+
+  function getMusicScrollAmount() {
+    const card =
+      musicCarousel.querySelector(".content-card");
+
+    if (!card) {
+      return musicCarousel.clientWidth * 0.8;
+    }
+
+    return card.getBoundingClientRect().width + 24;
+  }
+
+  previousSong.addEventListener("click", function () {
+    musicCarousel.scrollBy({
+      left: -getMusicScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+  nextSong.addEventListener("click", function () {
+    musicCarousel.scrollBy({
+      left: getMusicScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+</script>
 </body>
 </html>
