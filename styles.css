@@ -1655,5 +1655,46 @@ a {
   .site-footer .copyright {
     font-size: 1rem;
   }
+/* =========================================================
+   UNIVERSAL CAROUSEL BUTTON STANDARD
+   ========================================================= */
 
+.music-carousel-topbar .music-carousel-button,
+.dispatch-carousel-topbar .carousel-button {
+  appearance: none;
+  -webkit-appearance: none;
+
+  box-sizing: border-box;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+@media (max-width: 600px) {
+
+  .music-carousel-topbar .music-carousel-button,
+  .dispatch-carousel-topbar .carousel-button {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+}
 }
