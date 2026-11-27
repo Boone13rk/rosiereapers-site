@@ -1444,7 +1444,7 @@ a {
   color: var(--red-bright);
 
   font-family: "Cinzel", Georgia, serif;
-  font-size: clamp(0.9rem, 1.1vw, 1rem);
+   font-size: 1rem;
   font-weight: 700;
 
   letter-spacing: 0.12em;
@@ -1491,4 +1491,167 @@ a {
 
 .dsp-links a {
   font-size: 0.9rem;
+}
+/* =========================================================
+   GLOBAL READABILITY STANDARD
+   ========================================================= */
+
+/* GENERAL READING TEXT */
+
+.section-copy,
+.song-body-copy,
+.character-details p,
+.reference-panel p,
+.sources-panel p,
+.listen-panel p,
+.dispatch-panel p {
+  font-size: 1.15rem;
+  line-height: 1.85;
+}
+
+
+/* SONG LYRICS */
+
+.lyrics-panel {
+  font-size: 1.3rem;
+  line-height: 1.85;
+}
+
+
+/* CARD DESCRIPTIONS */
+
+.content-card p:not(.card-category),
+.reaper-six-card p:not(.card-category):not(.dispatch-date) {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+
+/* CAROUSEL CATEGORY CONSISTENCY */
+
+#music-carousel .content-card .card-category,
+#salami-carousel .reaper-six-card .card-category {
+  font-size: 1rem;
+  color: var(--red-bright);
+}
+
+
+/* =========================================================
+   STANDARDIZED SITE FOOTER
+   ========================================================= */
+
+.site-footer {
+  padding: 60px 20px;
+  border-top: 1px solid var(--red-dark);
+  background: #030303;
+  text-align: center;
+}
+
+.site-footer .footer-brand {
+  margin: 0 0 12px;
+
+  color: var(--white);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.site-footer .footer-tagline {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+}
+
+.footer-social-links a {
+  font-size: 0.9rem;
+}
+
+.veteran-badge {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+
+.veteran-flag {
+  width: 36px;
+  height: 19px;
+}
+
+.veteran-divider {
+  height: 19px;
+}
+
+.site-footer .copyright {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CAROUSEL SCROLLBAR STYLING
+   ========================================================= */
+
+.music-carousel,
+.salami-carousel {
+  scrollbar-width: thin;
+  scrollbar-color: #a51b21 #161616;
+}
+
+.music-carousel::-webkit-scrollbar,
+.salami-carousel::-webkit-scrollbar {
+  height: 10px;
+}
+
+.music-carousel::-webkit-scrollbar-track,
+.salami-carousel::-webkit-scrollbar-track {
+  background: #161616;
+  border-radius: 5px;
+}
+
+.music-carousel::-webkit-scrollbar-thumb,
+.salami-carousel::-webkit-scrollbar-thumb {
+  background: #a51b21;
+  border: 2px solid #161616;
+  border-radius: 5px;
+}
+
+.music-carousel::-webkit-scrollbar-thumb:hover,
+.salami-carousel::-webkit-scrollbar-thumb:hover {
+  background: var(--red-bright);
+}
+
+
+/* =========================================================
+   MOBILE READABILITY
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .lyrics-panel {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .site-footer {
+    padding: 48px 20px;
+  }
+
+  .site-footer .footer-brand {
+    font-size: 1.3rem;
+  }
+
+  .site-footer .footer-tagline {
+    font-size: 0.9rem;
+  }
+
+  .veteran-badge {
+    font-size: 0.8rem;
+  }
+
+  .site-footer .copyright {
+    font-size: 1rem;
+  }
+
 }
